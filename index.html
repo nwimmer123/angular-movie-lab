@@ -33,11 +33,9 @@
       </ng-pluralize>
     I should read</h2>
 
-
   <h4>I have {{cc.comicList.length}} comics to read</h4>
 
- 
-  <form ng-submit="cc.addComic()">
+  <form data-ng-submit="cc.addComic()">
     If there is a comic you think I should add, please add it to the list!
     <br>
     Name: <input type="text" ng-model="cc.comic.name" /><br>
@@ -48,7 +46,6 @@
     <input type="submit" id="submit" value="Submit" /><br>
   </form>
   
-
   <div data-ng-repeat="comic in cc.comicList | orderBy:'-rating' | limitTo:'3'" >
     <p>Name: {{comic.name}}</p>
     <p>Type: {{comic.type}}</p>
@@ -56,7 +53,6 @@
     <p>Rating: {{comic.rating}}</p>
     <br>
   </div>
-
 
 </body>
 </html>

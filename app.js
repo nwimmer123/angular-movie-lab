@@ -46,6 +46,8 @@ function comicController(){
   vm.comic = {};
   vm.comicList.push(newComic);
   };
+
+
 }
 
 
