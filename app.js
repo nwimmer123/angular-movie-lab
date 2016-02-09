@@ -39,3 +39,7 @@ function comicController(){
    ];
   console.log(vm);
 }
+
+function addComic() {
+
+}

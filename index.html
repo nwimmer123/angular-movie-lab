@@ -25,8 +25,29 @@
 </head>
 
 <body data-ng-controller="ComicController as cc">
-  <h3>Comics I should read</h3>
-  <h4>I have {{comicList.length}} comics to read</h4>
+
+    <h2>
+      <ng-pluralize count="cc.comicList.length" when="{'0': 'No comics', 
+                           '1': 'A comic ', 
+                           'other': '{{amount | number:2}} Comics '}">
+      </ng-pluralize>
+    I should read</h2>
+
+
+  <h4>I have {{cc.comicList.length}} comics to read</h4>
+
+ 
+  <form ng-submit="submit()" ng-controller="ComicController">
+    If there is a comic you think I should add, please add it to the list!
+    <br>
+    Name: <input type="text" ng-model="cc.comic.name" /><br>
+    Type: <input type="text" ng-model="cc.comic.type" /><br>
+    Recomender: <input type="text" ng-model="cc.comic.recommender" /><br>
+    Rating: <input type="number" ng-model="cc.comic.rating" /><br>
+
+    <input type="submit" id="submit" value="Submit" /><br>
+  </form>
+  
 
   <div data-ng-repeat="comic in cc.comicList | orderBy:'-rating'" >
     <p>Name: {{comic.name}}</p>
