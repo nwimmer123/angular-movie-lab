@@ -37,9 +37,16 @@ function comicController(){
       rating: 2
     }
    ];
+
   console.log(vm);
+
+  vm.comic ={};
+  vm.addComic = function () {
+  var newComic = vm.comic;
+  vm.comic = {};
+  vm.comicList.push(newComic);
+  };
 }
 
-function addComic() {
 
-}
+

@@ -37,7 +37,7 @@
   <h4>I have {{cc.comicList.length}} comics to read</h4>
 
  
-  <form ng-submit="submit()" ng-controller="ComicController">
+  <form ng-submit="cc.addComic()">
     If there is a comic you think I should add, please add it to the list!
     <br>
     Name: <input type="text" ng-model="cc.comic.name" /><br>
