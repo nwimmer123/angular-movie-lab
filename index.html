@@ -49,7 +49,7 @@
   </form>
   
 
-  <div data-ng-repeat="comic in cc.comicList | orderBy:'-rating'" >
+  <div data-ng-repeat="comic in cc.comicList | orderBy:'-rating' | limitTo:'3'" >
     <p>Name: {{comic.name}}</p>
     <p>Type: {{comic.type}}</p>
     <p>According to: {{comic.recommender}}</p>
