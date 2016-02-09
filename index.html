@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="comicApp"> 
+<head>
+  <title>Comic reading list</title>
+  <meta charset="utf8" />
+
+  <!-- Stylesheets -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- JQuery -->
+
+  <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+  <!-- Bootstrap -->
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Angular -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body data-ng-controller="ComicController as cc">
+  <h3>Comics I should read</h3>
+
+  <div data-ng-repeat="comic in cc.comicList">
+    <p>Name: {{comic.name}}</p>
+    <p>Type: {{comic.type}}</p>
+    <br>
+  </div>
+
+
+</body>
+</html>
